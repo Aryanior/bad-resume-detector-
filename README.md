@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Is Your Resume Poopy?
 
-## Getting Started
+A brutally honest AI-powered resume analyzer that roasts your resume, gives actionable feedback, and estimates your chances of getting hired.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Overview
+
+This project analyzes resumes using AI and provides:
+
+* A sarcastic, Gen-Z style roast
+* Actionable improvement suggestions
+* An ATS-style score (out of 10)
+* A rejection risk breakdown by resume sections
+* A final verdict on whether you're getting the job
+
+Built as a fun yet insightful tool to help users improve their resumes.
+
+---
+
+## Features
+
+* Resume upload (PDF)
+* AI-powered analysis using Groq (LLaMA model)
+* Resume parsing via PDF.co API
+* Animated and interactive UI
+* Dynamic score visualization
+* Section-wise rejection risk graph
+* Verdict system based on ATS score
+
+---
+
+## Tech Stack
+
+**Frontend**
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* Recharts
+
+**Backend**
+
+* Next.js API Routes
+* Groq SDK (AI analysis)
+* PDF.co API (PDF to text conversion)
+
+---
+
+## How It Works
+
+1. User uploads a resume (PDF)
+2. File is sent to backend
+3. PDF is converted to text via PDF.co
+4. Text is analyzed using AI (Groq LLaMA model)
+5. AI returns:
+
+   * Roast
+   * Suggestions
+   * Score
+   * Section analysis
+6. Frontend displays results with animations and charts
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```
+GROQ_API_KEY=your_groq_api_key
+PDF_API_KEY=your_pdfco_api_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
 
-## Learn More
+```
+git clone https://github.com/yourusername/bad-resume-detector.git
+cd bad-resume-detector
+```
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run locally:
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deployed using Vercel.
+
+Steps:
+
+1. Push code to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Deploy
+
+---
+
+## Project Structure
+
+```
+app/
+  api/roast/route.js   # Backend logic (AI + PDF processing)
+  page.tsx             # Frontend UI
+  layout.tsx           # Layout
+
+public/                # Static assets
+```
+
+---
+
+## Future Improvements
+
+* Job description matching (real ATS simulation)
+* More accurate scoring algorithm (logic + AI hybrid)
+* Shareable results
+* Resume templates
+* User history
+
+---
+
+## Disclaimer
+
+This tool is for entertainment and guidance purposes.
+It does not guarantee actual hiring outcomes.
+
+---
+
+## Author
+
+Aryan Mathuriya
+AI & Data Science Student
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
