@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="x_CnJJPDW0zi_0_Lctm42wjbCGWq73fGKwt8mvAfIG0"
+        />
+      </Head>
+
       <body className="min-h-full flex flex-col">
         {children}
       </body>
