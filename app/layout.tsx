@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   title: "Is Your Resume Poopy?",
   description:
     "Upload your resume and get brutally honest AI feedback, ATS score, and hiring chances.",
-  verification: {
-    google: "x_CnJJPDW0zi_0_Lctm42wjbCGWq73fGKwt8mvAfIG0",
+  other: {
+    "google-site-verification":
+      "x_CnJJPDW0zi_0_Lctm42wjbCGWq73fGKwt8mvAfIG0",
   },
 };
 
